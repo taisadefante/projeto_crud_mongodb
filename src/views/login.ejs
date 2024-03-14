@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <%- include('partials/head.ejs') %>
+<body>
+
+  <h1><%= title %></h1>
+
+  <form action="/login" method="POST">
+    <% if (typeof message !== 'undefined' && message) { %>
+      <div>
+        <%= message %>
+      </div>
+    <% } %>
+    <div>
+      <label>E-mail</label>
+      <input type="text" name="email" placeholder="Digite o seu e-mail">
+    </div>
+    <div>
+      <label>Senha</label>
+      <input type="password" name="password" placeholder="Digite o sua senha">
+    </div>
+    <button type="submit">Entrar</button>
+  </form>
+
+  <%- include('partials/foot.ejs') %>
+  
+</body>
+</html>
